@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Assemblage1">
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="-0.0317780024555155 -0.0416290302039092 -4.84322725841584E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.099913253768249" />
+      <inertia
+        ixx="5.26894904194742E-05"
+        ixy="-4.91617233346469E-06"
+        ixz="-2.12615653369078E-11"
+        iyy="6.1865203895909E-05"
+        iyz="-3.44716620593123E-11"
+        izz="0.000110769106983496" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="MoP">
+    <inertial>
+      <origin
+        xyz="-0.00293220937857835 0.00632546796877385 -1.45520032557199E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00255919241298572" />
+      <inertia
+        ixx="1.46637612238249E-07"
+        ixy="3.30027530868883E-08"
+        ixz="4.36834348772607E-24"
+        iyy="9.07415094954518E-08"
+        iyz="-2.29638710034628E-23"
+        izz="1.86963684362792E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P0"
+    type="revolute">
+    <origin
+      xyz="-0.061489 0 0.0010762"
+      rpy="1.5708 0.28599 0" />
+    <parent
+      link="body" />
+    <child
+      link="MoP" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BP">
+    <inertial>
+      <origin
+        xyz="-0.0084113336029166 0.0181452326251401 -3.42607886505419E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0038735397861954" />
+      <inertia
+        ixx="5.28071050490407E-07"
+        ixy="2.12422682141576E-07"
+        ixz="-2.34092113352507E-22"
+        iyy="1.68295002879297E-07"
+        iyz="1.83634095986772E-22"
+        izz="6.33161083366812E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P1"
+    type="revolute">
+    <origin
+      xyz="-0.0073599 0.015877 0"
+      rpy="0.084794 0.03924 0.0016649" />
+    <parent
+      link="MoP" />
+    <child
+      link="BP" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MP">
+    <inertial>
+      <origin
+        xyz="-0.00420380391442909 0.00897896333031706 3.99820593299793E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237109569304739" />
+      <inertia
+        ixx="1.28381625801957E-07"
+        ixy="2.73818544101998E-08"
+        ixz="1.47144251627205E-16"
+        iyy="8.5271339251763E-08"
+        iyz="-2.69810152705628E-16"
+        izz="1.75566459338251E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P2"
+    type="revolute">
+    <origin
+      xyz="-0.016823 0.03629 0"
+      rpy="0.37611 0.16865 0.032168" />
+    <parent
+      link="BP" />
+    <child
+      link="MP" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="EP">
+    <inertial>
+      <origin
+        xyz="-0.00331864433873978 0.00715916547211324 0.000107037810905417"
+        rpy="0 0 0" />
+      <mass
+        value="0.00158516331078646" />
+      <inertia
+        ixx="6.32795292840303E-08"
+        ixy="1.69330066509074E-08"
+        ixz="3.68775388961158E-10"
+        iyy="3.45969358532547E-08"
+        iyz="-7.94913043760575E-10"
+        izz="7.6046113606227E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/EP.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/EP.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="P3"
+    type="revolute">
+    <origin
+      xyz="-0.0084113 0.018145 0"
+      rpy="0.58262 0.24973 0.075235" />
+    <parent
+      link="MP" />
+    <child
+      link="EP" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MoR">
+    <inertial>
+      <origin
+        xyz="-0.00293220937857833 0.00632546796877384 4.91378912611739E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00255919241298572" />
+      <inertia
+        ixx="1.46637612238249E-07"
+        ixy="3.30027530868887E-08"
+        ixz="1.99080074695055E-23"
+        iyy="9.0741509495452E-08"
+        iyz="1.46054870935857E-23"
+        izz="1.86963684362793E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R0"
+    type="revolute">
+    <origin
+      xyz="-0.038156 0 0.0010762"
+      rpy="1.5708 0.43367 0" />
+    <parent
+      link="body" />
+    <child
+      link="MoR" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BR">
+    <inertial>
+      <origin
+        xyz="-0.00841133360291669 0.01814523262514 -1.05818132034585E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0038735397861954" />
+      <inertia
+        ixx="5.28071050490406E-07"
+        ixy="2.12422682141575E-07"
+        ixz="1.19941188820189E-22"
+        iyy="1.68295002879296E-07"
+        iyz="5.93915679813074E-22"
+        izz="6.33161083366809E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R1"
+    type="revolute">
+    <origin
+      xyz="-0.0073599 0.015877 0"
+      rpy="0.18212 0.083759 0.0076525" />
+    <parent
+      link="MoR" />
+    <child
+      link="BR" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MR">
+    <inertial>
+      <origin
+        xyz="-0.00511106554568592 0.00855839665017134 3.9982080146661E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237109569304739" />
+      <inertia
+        ixx="1.28381625801953E-07"
+        ixy="2.73818544102003E-08"
+        ixz="1.47144871185484E-16"
+        iyy="8.5271339251762E-08"
+        iyz="-2.69810043517787E-16"
+        izz="1.75566459338247E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MR.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MR.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R2"
+    type="revolute">
+    <origin
+      xyz="-0.016823 0.03629 0"
+      rpy="0.28269 0.12859 0.018322" />
+    <parent
+      link="BR" />
+    <child
+      link="MR" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ER">
+    <inertial>
+      <origin
+        xyz="-0.00422591555438051 0.00673860644655273 0.000107034349140913"
+        rpy="0 0 0" />
+      <mass
+        value="0.00158516503814541" />
+      <inertia
+        ixx="6.32794906351526E-08"
+        ixy="1.69331692425388E-08"
+        ixz="3.68762244765979E-10"
+        iyy="3.45969451339538E-08"
+        iyz="-7.94871995175647E-10"
+        izz="7.60462532418065E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/ER.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/ER.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R3"
+    type="revolute">
+    <origin
+      xyz="-0.0084113 0.018145 0"
+      rpy="-0.13162 -0.060764 0.004006" />
+    <parent
+      link="MR" />
+    <child
+      link="ER" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MoM">
+    <inertial>
+      <origin
+        xyz="-0.00293220937857834 0.00632546796877383 -1.45472119467669E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00255919241298571" />
+      <inertia
+        ixx="1.46637612238249E-07"
+        ixy="3.30027530868881E-08"
+        ixz="1.07828210437865E-23"
+        iyy="9.07415094954515E-08"
+        iyz="4.18519976445112E-23"
+        izz="1.86963684362793E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoM.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoM.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="M0"
+    type="revolute">
+    <origin
+      xyz="-0.014823 0 0.0010762"
+      rpy="1.5708 0.46822 0" />
+    <parent
+      link="body" />
+    <child
+      link="MoM" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BM">
+    <inertial>
+      <origin
+        xyz="-0.00841133360291656 0.0181452326251401 -3.03576608295941E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.00387353978619539" />
+      <inertia
+        ixx="5.28071050490406E-07"
+        ixy="2.12422682141575E-07"
+        ixz="-5.24018918052343E-22"
+        iyy="1.68295002879296E-07"
+        iyz="2.61389073566757E-22"
+        izz="6.33161083366809E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BM.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BM.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="M1"
+    type="revolute">
+    <origin
+      xyz="-0.0073599 0.015877 0"
+      rpy="0.21346 0.097886 0.010495" />
+    <parent
+      link="MoM" />
+    <child
+      link="BM" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MM">
+    <inertial>
+      <origin
+        xyz="-0.00511106554568629 0.00855839665017128 3.99823091301599E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.0023710956930474" />
+      <inertia
+        ixx="1.28381625801959E-07"
+        ixy="2.73818544102015E-08"
+        ixz="1.47144135821919E-16"
+        iyy="8.52713392517634E-08"
+        iyz="-2.69809805289771E-16"
+        izz="1.75566459338253E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MM.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MM.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="M2"
+    type="revolute">
+    <origin
+      xyz="-0.016823 0.03629 0"
+      rpy="0.095455 0.044153 0.0021092" />
+    <parent
+      link="BM" />
+    <child
+      link="MM" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="EM">
+    <inertial>
+      <origin
+        xyz="-0.00422591227853702 0.00673860339802749 0.000107039186693112"
+        rpy="0 0 0" />
+      <mass
+        value="0.0015851647154223" />
+      <inertia
+        ixx="6.32794759861742E-08"
+        ixy="1.69330882930686E-08"
+        ixz="3.68776959871066E-10"
+        iyy="3.45969592327741E-08"
+        iyz="-7.94930068509272E-10"
+        izz="7.60461994645335E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/EM.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/EM.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="M3"
+    type="revolute">
+    <origin
+      xyz="-0.0084113 0.018145 0"
+      rpy="0.24136 0.11035 0.013395" />
+    <parent
+      link="MM" />
+    <child
+      link="EM" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MoI">
+    <inertial>
+      <origin
+        xyz="-0.00460821527933892 0.00557234453237535 1.31025774198672E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00255919241298572" />
+      <inertia
+        ixx="1.46637612238251E-07"
+        ixy="3.30027530868886E-08"
+        ixz="5.61711877417609E-23"
+        iyy="9.07415094954518E-08"
+        iyz="-2.02637300472187E-22"
+        izz="1.86963684362794E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoI.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MoI.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="I0"
+    type="revolute">
+    <origin
+      xyz="0.01 0 0"
+      rpy="1.5708 1.0481 0" />
+    <parent
+      link="body" />
+    <child
+      link="MoI" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BI">
+    <inertial>
+      <origin
+        xyz="-0.010078258526922 0.0173725193777277 1.04083408558608E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00387353978619539" />
+      <inertia
+        ixx="5.28071050490401E-07"
+        ixy="2.12422682141575E-07"
+        ixz="1.81979734761666E-23"
+        iyy="1.68295002879296E-07"
+        iyz="-3.63959469523332E-23"
+        izz="6.33161083366805E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BI.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BI.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="I1"
+    type="revolute">
+    <origin
+      xyz="-0.007369 0.015897 0"
+      rpy="0.72428 0.298 0.11362" />
+    <parent
+      link="MoI" />
+    <child
+      link="BI" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MI">
+    <inertial>
+      <origin
+        xyz="-0.0058707288384357 0.00820625008290406 3.99820489216385E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237109569304739" />
+      <inertia
+        ixx="1.28381625801954E-07"
+        ixy="2.7381854410201E-08"
+        ixz="1.47143396322452E-16"
+        iyy="8.52713392517623E-08"
+        iyz="-2.69810824376286E-16"
+        izz="1.75566459338248E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MI.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MI.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="I2"
+    type="revolute">
+    <origin
+      xyz="-0.016823 0.03629 0"
+      rpy="0.059621 0.027614 0.00082348" />
+    <parent
+      link="BI" />
+    <child
+      link="MI" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="EI">
+    <inertial>
+      <origin
+        xyz="-0.00498556201149572 0.00638644900259262 0.000107043437449848"
+        rpy="0 0 0" />
+      <mass
+        value="0.0015851620791872" />
+      <inertia
+        ixx="6.32795620506267E-08"
+        ixy="1.69328924060062E-08"
+        ixz="3.68817345589765E-10"
+        iyy="3.45968627932674E-08"
+        iyz="-7.94979713210856E-10"
+        izz="7.60460440825033E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/EI.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/EI.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="I3"
+    type="revolute">
+    <origin
+      xyz="-0.0084113 0.018145 0"
+      rpy="-0.26146 -0.11926 0.015698" />
+    <parent
+      link="MI" />
+    <child
+      link="EI" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="BT">
+    <inertial>
+      <origin
+        xyz="-0.00497518079694806 0.0197380822820551 -1.73472347597681E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.00387353978619539" />
+      <inertia
+        ixx="5.28071050490405E-07"
+        ixy="2.12422682141574E-07"
+        ixz="-2.60561892954204E-22"
+        iyy="1.68295002879295E-07"
+        iyz="7.80858498250058E-22"
+        izz="6.33161083366809E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/BT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="T0"
+    type="revolute">
+    <origin
+      xyz="0.0041266 0 -0.057752"
+      rpy="-3.0339 0.91713 0.68118" />
+    <parent
+      link="body" />
+    <child
+      link="BT" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="MT">
+    <inertial>
+      <origin
+        xyz="-0.00076765110846054 0.0105718129872322 3.99820680035967E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.00237109569304739" />
+      <inertia
+        ixx="1.28381625801955E-07"
+        ixy="2.73818544102012E-08"
+        ixz="1.4714439390227E-16"
+        iyy="8.52713392517626E-08"
+        iyz="-2.69809603457702E-16"
+        izz="1.75566459338249E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/MT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="T1"
+    type="revolute">
+    <origin
+      xyz="-0.016823 0.03629 0"
+      rpy="0.80088 0.32129 0.13697" />
+    <parent
+      link="BT" />
+    <child
+      link="MT" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ET">
+    <inertial>
+      <origin
+        xyz="0.000117504898841745 0.00875201885315917 0.000107040189913116"
+        rpy="0 0 0" />
+      <mass
+        value="0.00158516415534188" />
+      <inertia
+        ixx="6.32794969377475E-08"
+        ixy="1.69330551106121E-08"
+        ixz="3.68792905600493E-10"
+        iyy="3.45969156376173E-08"
+        iyz="-7.94942099343556E-10"
+        izz="7.60461773859394E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/ET.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Assemblage1/meshes/ET.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="T2"
+    type="revolute">
+    <origin
+      xyz="-0.0084113 0.018145 0"
+      rpy="0.32428 0.14664 0.024029" />
+    <parent
+      link="MT" />
+    <child
+      link="ET" />
+    <axis
+      xyz="0.90726 0.42057 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
